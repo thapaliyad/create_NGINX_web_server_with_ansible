@@ -1,0 +1,11 @@
+---
+- name: add nginx repo to the system
+  yum_repository:
+    name: nginx
+    description: nginx repo - $releasever - $basearch
+    file: nginx
+    baseurl: "{{ baseurl }}"
+    enabled: yes
+    gpgcheck: no
+    failovermethod: priority
+    

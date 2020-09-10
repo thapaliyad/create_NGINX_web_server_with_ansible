@@ -1,0 +1,2 @@
+---
+baseurl: http://nginx.org/packages/mainline/centos/$releasever/$basearch

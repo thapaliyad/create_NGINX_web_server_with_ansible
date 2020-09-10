@@ -1,0 +1,16 @@
+events {}
+
+http {
+    server {
+        listen {{website_port}};
+        server_name _;
+    }
+ 
+    server {
+        listen {{website_port}};
+        server_name {{ansible_hostname}};
+        root {{hosting_location}}/;
+        {{home_page_name}} {{or_home_page_app_name}};
+;
+    } 
+}

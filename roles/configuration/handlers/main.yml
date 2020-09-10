@@ -1,0 +1,13 @@
+---
+- name: Start the nginx service for version 7 onward
+  systemd: 
+    name: nginx
+    state: started
+    daemon_reload: yes
+  when: ansible_service_mgr == 'systemd'
+
+- name: Sart the nginx service for version 6
+  service: 
+    name: nginx
+    state: started
+  when: ansible_service_mgr != 'systemd'
